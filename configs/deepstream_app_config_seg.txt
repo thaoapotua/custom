@@ -6,27 +6,18 @@ perf-measurement-interval-sec=5
 enable=1
 rows=1
 columns=1
-width=1920
-height=1080
+width=1280
+height=720
 gpu-id=0
 nvbuf-memory-type=0
 
-[source0]
+[source1]
 enable=1
 type=3
 uri=file:///media/tat/Learn1/lo_trinh/dataset_test_model/DJI_0315_W.MP4
 num-sources=1
 gpu-id=0
 cudadec-memtype=0
-nvbuf-memory-type=0
-convert-ops=roi-crop;
-roi-params=320;180;1280;720
-
-[preprocess]
-enable=1
-gpu-id=0
-nvbuf-memory-type=0
-config-file=config_preprocess.txt
 
 [sink1]
 enable=1
@@ -55,8 +46,8 @@ gpu-id=0
 live-source=0
 batch-size=1
 batched-push-timeout=40000
-width=1920
-height=1080
+width=1280
+height=720
 enable-padding=0
 nvbuf-memory-type=0
 
@@ -65,13 +56,11 @@ enable=1
 gpu-id=0
 gie-unique-id=2
 nvbuf-memory-type=0
-interval=5
 config-file=../configs/config_infer_primary_yoloV8_seg.txt
-input-tensor-meta=1
 
 [tracker]
-tracker-width=1920
-tracker-height=1080
+tracker-width=1280
+tracker-height=720
 gpu-id=0
 ll-lib-file=/opt/nvidia/deepstream/deepstream/lib/libnvds_nvmultiobjecttracker.so
 ll-config-file=config_tracker_NvDCF_perf.yml
