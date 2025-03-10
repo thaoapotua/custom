@@ -1,0 +1,56 @@
+2025-01-22 15:57:43,321 - DeepStreamLauncher - INFO - Starting DeepStream Launcher...
+2025-01-22 15:57:43,321 - DeepStreamLauncher - INFO - Created pipe: /tmp/ds_detection_pipe
+2025-01-22 15:57:43,322 - DeepStreamLauncher - INFO - Created pipe: /tmp/ds_segmentation_pipe
+2025-01-22 15:57:43,422 - DeepStreamLauncher - INFO - Opening pipes for reading...
+2025-01-22 15:57:43,422 - DeepStreamLauncher - INFO - Opened pipe: /tmp/ds_detection_pipe
+2025-01-22 15:57:43,422 - DeepStreamLauncher - INFO - Opened pipe: /tmp/ds_segmentation_pipe
+2025-01-22 15:57:43,422 - DeepStreamLauncher - INFO - Starting DeepStream...
+2025-01-22 15:57:43,422 - DeepStreamLauncher - INFO - DeepStream process PID: 878153
+2025-01-22 15:57:43,437 - DeepStreamLauncher - INFO - DeepStream STDOUT: Setting up IPC pipes...
+2025-01-22 15:57:43,437 - DeepStreamLauncher - INFO - DeepStream STDOUT: Opening detection pipe for writing...
+2025-01-22 15:57:43,437 - DeepStreamLauncher - INFO - DeepStream STDOUT: Opening segmentation pipe for writing...
+2025-01-22 15:57:43,437 - DeepStreamLauncher - INFO - DeepStream STDOUT: Both pipes opened successfully
+2025-01-22 15:57:43,438 - DeepStreamLauncher - INFO - DeepStream STDOUT: Initializing config files...
+2025-01-22 15:57:43,438 - DeepStreamLauncher - INFO - DeepStream STDOUT: Parsing config file for Stream[0]: /home/tat/deepstream-custom-app/configs/deepstream_app_config_box_wedcam.txt
+2025-01-22 15:57:43,438 - DeepStreamLauncher - INFO - DeepStream STDOUT: Parsing config file for Stream[1]: /home/tat/deepstream-custom-app/configs/deepstream_app_config_seg.txt
+2025-01-22 15:57:43,438 - DeepStreamLauncher - INFO - DeepStream STDOUT: ROI set to: x=320, y=180, w=1280, h=720
+2025-01-22 15:57:43,438 - DeepStreamLauncher - INFO - DeepStream STDOUT: ** WARN: <parse_streammux:779>: Unknown key 'batch-timeout' for group [streammux]
+2025-01-22 15:57:43,438 - DeepStreamLauncher - INFO - DeepStream STDOUT: ** WARN: <parse_gie:1388>: Unknown key 'operate-on-roi' for group [primary-gie]
+2025-01-22 15:57:43,438 - DeepStreamLauncher - INFO - DeepStream STDOUT: ** WARN: <parse_gie:1388>: Unknown key 'region-of-interest' for group [primary-gie]
+2025-01-22 15:57:43,438 - DeepStreamLauncher - INFO - DeepStream STDOUT: Creating pipelines...
+2025-01-22 15:57:43,438 - DeepStreamLauncher - INFO - DeepStream STDOUT: Creating pipeline for Stream[0]
+2025-01-22 15:57:43,641 - DeepStreamLauncher - INFO - DeepStream STDOUT: Creating pipeline for Stream[1]
+2025-01-22 15:57:43,644 - DeepStreamLauncher - INFO - DeepStream STDERR: Unknown or legacy key specified 'input-shape' for group [property]
+2025-01-22 15:57:43,646 - DeepStreamLauncher - INFO - DeepStream STDOUT: Setting pipelines to PLAYING state...
+2025-01-22 15:57:45,423 - DeepStreamLauncher - INFO - DeepStream started successfully
+2025-01-22 15:57:45,423 - DeepStreamLauncher - INFO - Starting reader for /tmp/ds_detection_pipe
+2025-01-22 15:57:45,424 - DeepStreamLauncher - INFO - Starting reader for /tmp/ds_segmentation_pipe
+2025-01-22 15:57:45,424 - DeepStreamLauncher - INFO - DeepStream Launcher started successfully
+2025-01-22 15:57:45,824 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.397365852 [336m878153[00m 0x55829739f470 [36mINFO   [00m [00m             nvinfer gstnvinfer.cpp:680:gst_nvinfer_logger:<primary_gie>[00m NvDsInferContext[UID 1]: Info from NvDsInferContextImpl::deserializeEngineAndBackend() <nvdsinfer_context_impl.cpp:1909> [UID = 1]: deserialized trt engine from :/home/tat/deepstream-custom-app/configs/model_b1_gpu0_fp16.engine
+2025-01-22 15:57:45,857 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.430724042 [336m878153[00m 0x55829739f470 [36mINFO   [00m [00m             nvinfer gstnvinfer.cpp:680:gst_nvinfer_logger:<primary_gie>[00m NvDsInferContext[UID 1]: Info from NvDsInferContextImpl::generateBackendContext() <nvdsinfer_context_impl.cpp:2012> [UID = 1]: Use deserialized engine model: /home/tat/deepstream-custom-app/configs/model_b1_gpu0_fp16.engine
+2025-01-22 15:57:45,858 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.431472205 [336m878153[00m 0x55829739f470 [36mINFO   [00m [00m             nvinfer gstnvinfer_impl.cpp:328:notifyLoadModelStatus:<primary_gie>[00m [UID 1]: Load new model:/home/tat/deepstream-custom-app/configs/../configs/config_infer_primary_yoloV8_box.txt sucessfully
+2025-01-22 15:57:45,858 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.431904550 [336m878153[00m 0x55829739f470 [33;01mWARN   [00m [00m             v4l2src gstv4l2src.c:695:gst_v4l2src_query:<src_elem>[00m Can't give latency since framerate isn't fixated !
+2025-01-22 15:57:45,859 - DeepStreamLauncher - INFO - DeepStream STDOUT: WARNING: [TRT]: The getMaxBatchSize() function should not be used with an engine built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. This function will always return 1.
+2025-01-22 15:57:45,859 - DeepStreamLauncher - INFO - DeepStream STDOUT: INFO: ../nvdsinfer/nvdsinfer_model_builder.cpp:610 [Implicit Engine Info]: layers num: 4
+2025-01-22 15:57:45,859 - DeepStreamLauncher - INFO - DeepStream STDOUT: 0   INPUT  kFLOAT input           3x640x640
+2025-01-22 15:57:45,859 - DeepStreamLauncher - INFO - DeepStream STDOUT: 1   OUTPUT kFLOAT boxes           8400x4
+2025-01-22 15:57:45,859 - DeepStreamLauncher - INFO - DeepStream STDOUT: 2   OUTPUT kFLOAT scores          8400x1
+2025-01-22 15:57:45,859 - DeepStreamLauncher - INFO - DeepStream STDOUT: 3   OUTPUT kFLOAT classes         8400x1
+2025-01-22 15:57:45,859 - DeepStreamLauncher - INFO - DeepStream STDOUT: 
+2025-01-22 15:57:45,859 - DeepStreamLauncher - INFO - DeepStream STDOUT: Pipeline 0 is PLAYING
+2025-01-22 15:57:45,867 - DeepStreamLauncher - INFO - DeepStream STDOUT: gstnvtracker: Loading low-level lib at /opt/nvidia/deepstream/deepstream/lib/libnvds_nvmultiobjecttracker.so
+2025-01-22 15:57:45,867 - DeepStreamLauncher - INFO - DeepStream STDOUT: gstnvtracker: Batch processing is ON
+2025-01-22 15:57:45,867 - DeepStreamLauncher - INFO - DeepStream STDOUT: gstnvtracker: Past frame output is OFF
+2025-01-22 15:57:45,867 - DeepStreamLauncher - INFO - DeepStream STDERR: ERROR: ../nvdsinfer/nvdsinfer_func_utils.cpp:30 Could not open lib: /home/tat/deepstream-custom-app/nvdsinfer_custom_impl_Yolo_seg, error string: /home/tat/deepstream-custom-app/nvdsinfer_custom_impl_Yolo_seg: cannot open shared object file: No such file or directory
+2025-01-22 15:57:45,867 - DeepStreamLauncher - INFO - DeepStream STDOUT: [NvMultiObjectTracker] Initialized
+2025-01-22 15:57:45,868 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.440938576 [336m878153[00m 0x55829739f470 [31;01mERROR  [00m [00m             nvinfer gstnvinfer.cpp:674:gst_nvinfer_logger:<primary_gie>[00m NvDsInferContext[UID 2]: Error in NvDsInferContextImpl::initialize() <nvdsinfer_context_impl.cpp:1257> [UID = 2]: Could not open custom lib: (null)
+2025-01-22 15:57:45,868 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.440950135 [336m878153[00m 0x55829739f470 [33;01mWARN   [00m [00m             nvinfer gstnvinfer.cpp:888:gst_nvinfer_start:<primary_gie>[00m error: Failed to create NvDsInferContext instance
+2025-01-22 15:57:45,868 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.440956966 [336m878153[00m 0x55829739f470 [33;01mWARN   [00m [00m             nvinfer gstnvinfer.cpp:888:gst_nvinfer_start:<primary_gie>[00m error: Config file path: /home/tat/deepstream-custom-app/configs/DeepStream-Yolo-Seg/config_infer_primary_yoloV8_seg.txt, NvDsInfer Error: NVDSINFER_CUSTOM_LIB_FAILED
+2025-01-22 15:57:45,868 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.440985788 [336m878153[00m 0x55829739f470 [33;01mWARN   [00m [00;01;31;44m            GST_PADS gstpad.c:1142:gst_pad_set_active:<primary_gie:sink>[00m Failed to activate pad
+2025-01-22 15:57:45,868 - DeepStreamLauncher - INFO - DeepStream STDOUT: [NvMultiObjectTracker] De-initialized
+2025-01-22 15:57:45,868 - DeepStreamLauncher - INFO - DeepStream STDOUT: Failed to set pipeline 1 to PLAYING
+2025-01-22 15:57:45,868 - DeepStreamLauncher - INFO - DeepStream STDOUT: Cleaning up...
+2025-01-22 15:57:48,194 - DeepStreamLauncher - INFO - DeepStream STDOUT: Application completed successfully
+2025-01-22 15:57:48,330 - DeepStreamLauncher - INFO - Stopping DeepStream Launcher...
+2025-01-22 15:57:48,330 - DeepStreamLauncher - INFO - Terminating DeepStream process...
+2025-01-22 15:57:48,830 - DeepStreamLauncher - INFO - DeepStream Launcher stopped

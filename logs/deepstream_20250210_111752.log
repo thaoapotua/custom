@@ -1,0 +1,873 @@
+2025-02-10 11:17:52,964 - DeepStreamLauncher - INFO - Starting DeepStream Launcher...
+2025-02-10 11:17:52,964 - DeepStreamLauncher - INFO - Created pipe: /tmp/ds_detection_pipe
+2025-02-10 11:17:52,964 - DeepStreamLauncher - INFO - Created pipe: /tmp/ds_segmentation_pipe
+2025-02-10 11:17:53,064 - DeepStreamLauncher - INFO - Opening pipes for reading...
+2025-02-10 11:17:53,064 - DeepStreamLauncher - INFO - Opened pipe: /tmp/ds_detection_pipe
+2025-02-10 11:17:53,064 - DeepStreamLauncher - INFO - Opened pipe: /tmp/ds_segmentation_pipe
+2025-02-10 11:17:53,065 - DeepStreamLauncher - INFO - Starting DeepStream...
+2025-02-10 11:17:53,066 - DeepStreamLauncher - INFO - DeepStream process PID: 340766
+2025-02-10 11:17:53,085 - DeepStreamLauncher - INFO - DeepStream STDOUT: Setting up IPC pipes...
+2025-02-10 11:17:53,085 - DeepStreamLauncher - INFO - DeepStream STDOUT: Opening detection pipe for writing...
+2025-02-10 11:17:53,085 - DeepStreamLauncher - INFO - DeepStream STDOUT: Opening segmentation pipe for writing...
+2025-02-10 11:17:53,085 - DeepStreamLauncher - INFO - DeepStream STDOUT: Both pipes opened successfully
+2025-02-10 11:17:53,085 - DeepStreamLauncher - INFO - DeepStream STDOUT: Initializing config files...
+2025-02-10 11:17:53,085 - DeepStreamLauncher - INFO - DeepStream STDOUT: Parsing config file for Stream[0]: /home/tat/deepstream-custom-app/configs/deepstream_app_config_seg.txt
+2025-02-10 11:17:53,085 - DeepStreamLauncher - INFO - DeepStream STDOUT: ** WARN: <parse_source:649>: Unknown key 'source-list-params' for group [source0]
+2025-02-10 11:17:53,085 - DeepStreamLauncher - INFO - DeepStream STDOUT: Creating pipelines...
+2025-02-10 11:17:53,086 - DeepStreamLauncher - INFO - DeepStream STDOUT: Creating pipeline for Stream[0]
+2025-02-10 11:17:53,173 - DeepStreamLauncher - INFO - DeepStream STDOUT: Setting pipelines to PLAYING state...
+2025-02-10 11:17:53,255 - DeepStreamLauncher - INFO - DeepStream STDOUT: gstnvtracker: Loading low-level lib at /opt/nvidia/deepstream/deepstream/lib/libnvds_nvmultiobjecttracker.so
+2025-02-10 11:17:53,255 - DeepStreamLauncher - INFO - DeepStream STDOUT: gstnvtracker: Batch processing is ON
+2025-02-10 11:17:53,255 - DeepStreamLauncher - INFO - DeepStream STDOUT: gstnvtracker: Past frame output is OFF
+2025-02-10 11:17:53,255 - DeepStreamLauncher - INFO - DeepStream STDOUT: [NvMultiObjectTracker] Initialized
+2025-02-10 11:17:55,069 - DeepStreamLauncher - INFO - DeepStream started successfully
+2025-02-10 11:17:55,069 - DeepStreamLauncher - INFO - Starting reader for /tmp/ds_detection_pipe
+2025-02-10 11:17:55,069 - DeepStreamLauncher - INFO - Starting reader for /tmp/ds_segmentation_pipe
+2025-02-10 11:17:55,069 - DeepStreamLauncher - INFO - DeepStream Launcher started successfully
+2025-02-10 11:17:55,353 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.282699833 [333m340766[00m 0x56368ae86750 [36mINFO   [00m [00m             nvinfer gstnvinfer.cpp:680:gst_nvinfer_logger:<primary_gie>[00m NvDsInferContext[UID 2]: Info from NvDsInferContextImpl::deserializeEngineAndBackend() <nvdsinfer_context_impl.cpp:1909> [UID = 2]: deserialized trt engine from :/home/tat/DeepStream-Yolo-Seg/quan.onnx_b1_gpu0_fp16.engine
+2025-02-10 11:17:55,384 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.313302053 [333m340766[00m 0x56368ae86750 [36mINFO   [00m [00m             nvinfer gstnvinfer.cpp:680:gst_nvinfer_logger:<primary_gie>[00m NvDsInferContext[UID 2]: Info from NvDsInferContextImpl::generateBackendContext() <nvdsinfer_context_impl.cpp:2012> [UID = 2]: Use deserialized engine model: /home/tat/DeepStream-Yolo-Seg/quan.onnx_b1_gpu0_fp16.engine
+2025-02-10 11:17:55,391 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.320293844 [333m340766[00m 0x56368ae86750 [36mINFO   [00m [00m             nvinfer gstnvinfer_impl.cpp:328:notifyLoadModelStatus:<primary_gie>[00m [UID 2]: Load new model:/home/tat/deepstream-custom-app/configs/../configs/config_infer_primary_yoloV8_seg.txt sucessfully
+2025-02-10 11:17:55,392 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.321229101 [333m340766[00m 0x56368ae86750 [33;01mWARN   [00m [00m             basesrc gstbasesrc.c:3600:gst_base_src_start_complete:<source>[00m pad not activated yet
+2025-02-10 11:17:55,392 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.322000928 [333m340766[00m 0x56368ae86750 [33;01mWARN   [00m [00m             basesrc gstbasesrc.c:3600:gst_base_src_start_complete:<source>[00m pad not activated yet
+2025-02-10 11:17:55,393 - DeepStreamLauncher - INFO - DeepStream STDOUT: WARNING: [TRT]: The getMaxBatchSize() function should not be used with an engine built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. This function will always return 1.
+2025-02-10 11:17:55,393 - DeepStreamLauncher - INFO - DeepStream STDOUT: INFO: ../nvdsinfer/nvdsinfer_model_builder.cpp:610 [Implicit Engine Info]: layers num: 5
+2025-02-10 11:17:55,393 - DeepStreamLauncher - INFO - DeepStream STDOUT: 0   INPUT  kFLOAT input           3x640x640
+2025-02-10 11:17:55,393 - DeepStreamLauncher - INFO - DeepStream STDOUT: 1   OUTPUT kFLOAT boxes           100x4
+2025-02-10 11:17:55,393 - DeepStreamLauncher - INFO - DeepStream STDOUT: 2   OUTPUT kFLOAT scores          100x1
+2025-02-10 11:17:55,393 - DeepStreamLauncher - INFO - DeepStream STDOUT: 3   OUTPUT kFLOAT classes         100x1
+2025-02-10 11:17:55,393 - DeepStreamLauncher - INFO - DeepStream STDOUT: 4   OUTPUT kFLOAT masks           100x160x160
+2025-02-10 11:17:55,393 - DeepStreamLauncher - INFO - DeepStream STDOUT: 
+2025-02-10 11:17:55,393 - DeepStreamLauncher - INFO - DeepStream STDOUT: Pipeline 0 is PLAYING
+2025-02-10 11:17:55,393 - DeepStreamLauncher - INFO - DeepStream STDOUT: Running main loop...
+2025-02-10 11:17:55,396 - DeepStreamLauncher - INFO - DeepStream STDOUT: ** INFO: <bus_callback:239>: Pipeline ready
+2025-02-10 11:17:55,396 - DeepStreamLauncher - INFO - DeepStream STDOUT: 
+2025-02-10 11:17:55,401 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.330926852 [333m340766[00m 0x56368ae855e0 [33;01mWARN   [00m [00m             qtdemux qtdemux_types.c:239:qtdemux_type_get:[00m unknown QuickTime node type bdpt
+2025-02-10 11:17:55,401 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.330972552 [333m340766[00m 0x56368ae855e0 [33;01mWARN   [00m [00m             qtdemux qtdemux.c:3250:qtdemux_parse_trex:<qtdemux0>[00m failed to find fragment defaults for stream 1
+2025-02-10 11:17:55,405 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334384049 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:3057:gst_v4l2_object_get_nearest_size:<nvv4l2decoder0:sink>[00m Unable to try format: Unknown error -1
+2025-02-10 11:17:55,405 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334394494 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:2942:gst_v4l2_object_probe_caps_for_format:<nvv4l2decoder0:sink>[00m Could not probe minimum capture size for pixelformat MJPG
+2025-02-10 11:17:55,405 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334421708 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:3057:gst_v4l2_object_get_nearest_size:<nvv4l2decoder0:sink>[00m Unable to try format: Unknown error -1
+2025-02-10 11:17:55,405 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334426369 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:2948:gst_v4l2_object_probe_caps_for_format:<nvv4l2decoder0:sink>[00m Could not probe maximum capture size for pixelformat MJPG
+2025-02-10 11:17:55,405 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334437627 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:3057:gst_v4l2_object_get_nearest_size:<nvv4l2decoder0:sink>[00m Unable to try format: Unknown error -1
+2025-02-10 11:17:55,405 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334444707 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:2942:gst_v4l2_object_probe_caps_for_format:<nvv4l2decoder0:sink>[00m Could not probe minimum capture size for pixelformat AV10
+2025-02-10 11:17:55,406 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334448891 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:3057:gst_v4l2_object_get_nearest_size:<nvv4l2decoder0:sink>[00m Unable to try format: Unknown error -1
+2025-02-10 11:17:55,406 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334453600 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:2948:gst_v4l2_object_probe_caps_for_format:<nvv4l2decoder0:sink>[00m Could not probe maximum capture size for pixelformat AV10
+2025-02-10 11:17:55,406 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334462938 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:3057:gst_v4l2_object_get_nearest_size:<nvv4l2decoder0:sink>[00m Unable to try format: Unknown error -1
+2025-02-10 11:17:55,406 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334467812 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:2942:gst_v4l2_object_probe_caps_for_format:<nvv4l2decoder0:sink>[00m Could not probe minimum capture size for pixelformat DVX5
+2025-02-10 11:17:55,406 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334471875 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:3057:gst_v4l2_object_get_nearest_size:<nvv4l2decoder0:sink>[00m Unable to try format: Unknown error -1
+2025-02-10 11:17:55,406 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334499599 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:2948:gst_v4l2_object_probe_caps_for_format:<nvv4l2decoder0:sink>[00m Could not probe maximum capture size for pixelformat DVX5
+2025-02-10 11:17:55,406 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334509108 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:3057:gst_v4l2_object_get_nearest_size:<nvv4l2decoder0:sink>[00m Unable to try format: Unknown error -1
+2025-02-10 11:17:55,406 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334513781 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:2942:gst_v4l2_object_probe_caps_for_format:<nvv4l2decoder0:sink>[00m Could not probe minimum capture size for pixelformat DVX4
+2025-02-10 11:17:55,406 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334517620 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:3057:gst_v4l2_object_get_nearest_size:<nvv4l2decoder0:sink>[00m Unable to try format: Unknown error -1
+2025-02-10 11:17:55,406 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334522083 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:2948:gst_v4l2_object_probe_caps_for_format:<nvv4l2decoder0:sink>[00m Could not probe maximum capture size for pixelformat DVX4
+2025-02-10 11:17:55,406 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334555841 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:3057:gst_v4l2_object_get_nearest_size:<nvv4l2decoder0:sink>[00m Unable to try format: Unknown error -1
+2025-02-10 11:17:55,406 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334562059 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:2942:gst_v4l2_object_probe_caps_for_format:<nvv4l2decoder0:sink>[00m Could not probe minimum capture size for pixelformat MPG4
+2025-02-10 11:17:55,406 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334568996 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:3057:gst_v4l2_object_get_nearest_size:<nvv4l2decoder0:sink>[00m Unable to try format: Unknown error -1
+2025-02-10 11:17:55,407 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334576634 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:2948:gst_v4l2_object_probe_caps_for_format:<nvv4l2decoder0:sink>[00m Could not probe maximum capture size for pixelformat MPG4
+2025-02-10 11:17:55,407 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334600229 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:3057:gst_v4l2_object_get_nearest_size:<nvv4l2decoder0:sink>[00m Unable to try format: Unknown error -1
+2025-02-10 11:17:55,407 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334624320 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:2942:gst_v4l2_object_probe_caps_for_format:<nvv4l2decoder0:sink>[00m Could not probe minimum capture size for pixelformat MPG2
+2025-02-10 11:17:55,407 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334630378 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:3057:gst_v4l2_object_get_nearest_size:<nvv4l2decoder0:sink>[00m Unable to try format: Unknown error -1
+2025-02-10 11:17:55,407 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334636455 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:2948:gst_v4l2_object_probe_caps_for_format:<nvv4l2decoder0:sink>[00m Could not probe maximum capture size for pixelformat MPG2
+2025-02-10 11:17:55,407 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334675164 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:3057:gst_v4l2_object_get_nearest_size:<nvv4l2decoder0:sink>[00m Unable to try format: Unknown error -1
+2025-02-10 11:17:55,407 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334700977 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:2942:gst_v4l2_object_probe_caps_for_format:<nvv4l2decoder0:sink>[00m Could not probe minimum capture size for pixelformat H265
+2025-02-10 11:17:55,407 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334722075 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:3057:gst_v4l2_object_get_nearest_size:<nvv4l2decoder0:sink>[00m Unable to try format: Unknown error -1
+2025-02-10 11:17:55,407 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334726910 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:2948:gst_v4l2_object_probe_caps_for_format:<nvv4l2decoder0:sink>[00m Could not probe maximum capture size for pixelformat H265
+2025-02-10 11:17:55,407 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334736241 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:3057:gst_v4l2_object_get_nearest_size:<nvv4l2decoder0:sink>[00m Unable to try format: Unknown error -1
+2025-02-10 11:17:55,407 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334741606 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:2942:gst_v4l2_object_probe_caps_for_format:<nvv4l2decoder0:sink>[00m Could not probe minimum capture size for pixelformat VP90
+2025-02-10 11:17:55,407 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334745898 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:3057:gst_v4l2_object_get_nearest_size:<nvv4l2decoder0:sink>[00m Unable to try format: Unknown error -1
+2025-02-10 11:17:55,407 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334750709 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:2948:gst_v4l2_object_probe_caps_for_format:<nvv4l2decoder0:sink>[00m Could not probe maximum capture size for pixelformat VP90
+2025-02-10 11:17:55,407 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334775620 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:3057:gst_v4l2_object_get_nearest_size:<nvv4l2decoder0:sink>[00m Unable to try format: Unknown error -1
+2025-02-10 11:17:55,407 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334801021 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:2942:gst_v4l2_object_probe_caps_for_format:<nvv4l2decoder0:sink>[00m Could not probe minimum capture size for pixelformat VP80
+2025-02-10 11:17:55,407 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334805670 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:3057:gst_v4l2_object_get_nearest_size:<nvv4l2decoder0:sink>[00m Unable to try format: Unknown error -1
+2025-02-10 11:17:55,407 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334810351 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:2948:gst_v4l2_object_probe_caps_for_format:<nvv4l2decoder0:sink>[00m Could not probe maximum capture size for pixelformat VP80
+2025-02-10 11:17:55,408 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334821837 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:3057:gst_v4l2_object_get_nearest_size:<nvv4l2decoder0:sink>[00m Unable to try format: Unknown error -1
+2025-02-10 11:17:55,408 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334827201 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:2942:gst_v4l2_object_probe_caps_for_format:<nvv4l2decoder0:sink>[00m Could not probe minimum capture size for pixelformat H264
+2025-02-10 11:17:55,408 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334831464 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:3057:gst_v4l2_object_get_nearest_size:<nvv4l2decoder0:sink>[00m Unable to try format: Unknown error -1
+2025-02-10 11:17:55,408 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.334849253 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:2948:gst_v4l2_object_probe_caps_for_format:<nvv4l2decoder0:sink>[00m Could not probe maximum capture size for pixelformat H264
+2025-02-10 11:17:55,408 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.335749869 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:3057:gst_v4l2_object_get_nearest_size:<nvv4l2decoder0:src>[00m Unable to try format: Unknown error -1
+2025-02-10 11:17:55,408 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.335758527 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:2942:gst_v4l2_object_probe_caps_for_format:<nvv4l2decoder0:src>[00m Could not probe minimum capture size for pixelformat NM12
+2025-02-10 11:17:55,408 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.335764815 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:3057:gst_v4l2_object_get_nearest_size:<nvv4l2decoder0:src>[00m Unable to try format: Unknown error -1
+2025-02-10 11:17:55,408 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.335770379 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:2948:gst_v4l2_object_probe_caps_for_format:<nvv4l2decoder0:src>[00m Could not probe maximum capture size for pixelformat NM12
+2025-02-10 11:17:55,408 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.335779278 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m                v4l2 gstv4l2object.c:2395:gst_v4l2_object_add_interlace_mode:0x7fe7dc053cb0[00m Failed to determine interlace mode
+2025-02-10 11:17:55,513 - DeepStreamLauncher - INFO - DeepStream STDOUT: ** INFO: <bus_callback:225>: Pipeline running
+2025-02-10 11:17:55,514 - DeepStreamLauncher - INFO - DeepStream STDOUT: 
+2025-02-10 11:17:55,514 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.443728608 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m        v4l2videodec gstv4l2videodec.c:1836:gst_v4l2_video_dec_decide_allocation:<nvv4l2decoder0>[00m Duration invalid, not setting latency
+2025-02-10 11:17:55,514 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.443949149 [333m340766[00m 0x7fe7e4077b60 [33;01mWARN   [00m [00m      v4l2bufferpool gstv4l2bufferpool.c:1082:gst_v4l2_buffer_pool_start:<nvv4l2decoder0:pool:src>[00m Uncertain or not enough buffers, enabling copy threshold
+2025-02-10 11:17:55,515 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.444717589 [333m340766[00m 0x7fe7e801f6a0 [33;01mWARN   [00m [00m      v4l2bufferpool gstv4l2bufferpool.c:1533:gst_v4l2_buffer_pool_dqbuf:<nvv4l2decoder0:pool:src>[00m Driver should never set v4l2_buffer.field to ANY
+2025-02-10 11:18:00,007 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:00,007 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:00,017 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:00,018 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:00,028 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:00,028 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:00,038 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:00,038 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:00,049 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:00,049 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:00,059 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:00,059 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:00,069 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:00,070 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:00,080 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:00,080 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:00,090 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:00,090 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:10,008 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:10,009 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:10,019 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:10,020 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:10,030 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:10,030 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:10,040 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:10,040 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:10,051 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:10,051 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:10,062 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:10,062 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:10,073 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:10,073 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:10,083 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:10,083 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:10,093 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:10,093 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:20,010 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:20,010 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:20,020 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:20,020 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:20,030 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:20,030 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:20,041 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:20,041 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:20,051 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:20,051 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:20,061 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:20,062 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:20,072 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:20,072 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:20,082 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:20,082 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:20,093 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:20,093 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:30,008 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:30,009 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:30,019 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:30,020 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:30,030 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:30,031 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:30,041 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:30,041 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:30,051 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:30,051 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:30,062 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:30,062 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:30,072 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:30,072 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:30,083 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:30,083 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:30,093 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:30,093 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:37,828 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:44.757265531 [333m340766[00m 0x7fe7d8013120 [33;01mWARN   [00m [00m       nveglglessink ext/eglgles/gsteglglessink.c:894:gst_eglglessink_event_thread:<sink_sub_bin_sink1>[00m error: Output window was closed
+2025-02-10 11:18:37,828 - DeepStreamLauncher - INFO - DeepStream STDERR: ERROR from sink_sub_bin_sink1: Output window was closed
+2025-02-10 11:18:37,828 - DeepStreamLauncher - INFO - DeepStream STDERR: Debug info: ext/eglgles/gsteglglessink.c(894): gst_eglglessink_event_thread (): /GstPipeline:pipeline/GstBin:processing_bin_0/GstBin:sink_bin/GstBin:sink_sub_bin1/GstEglGlesSink:sink_sub_bin_sink1
+2025-02-10 11:18:38,530 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:45.459345142 [333m340766[00m 0x7fe7d8013120 [33;01mWARN   [00m [00m       nveglglessink ext/eglgles/gsteglglessink.c:894:gst_eglglessink_event_thread:<sink_sub_bin_sink1>[00m error: Output window was closed
+2025-02-10 11:18:38,530 - DeepStreamLauncher - INFO - DeepStream STDERR: ERROR from sink_sub_bin_sink1: Output window was closed
+2025-02-10 11:18:38,530 - DeepStreamLauncher - INFO - DeepStream STDERR: Debug info: ext/eglgles/gsteglglessink.c(894): gst_eglglessink_event_thread (): /GstPipeline:pipeline/GstBin:processing_bin_0/GstBin:sink_bin/GstBin:sink_sub_bin1/GstEglGlesSink:sink_sub_bin_sink1
+2025-02-10 11:18:38,981 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:45.910734175 [333m340766[00m 0x7fe7d8013120 [33;01mWARN   [00m [00m       nveglglessink ext/eglgles/gsteglglessink.c:894:gst_eglglessink_event_thread:<sink_sub_bin_sink1>[00m error: Output window was closed
+2025-02-10 11:18:38,982 - DeepStreamLauncher - INFO - DeepStream STDERR: ERROR from sink_sub_bin_sink1: Output window was closed
+2025-02-10 11:18:38,983 - DeepStreamLauncher - INFO - DeepStream STDERR: Debug info: ext/eglgles/gsteglglessink.c(894): gst_eglglessink_event_thread (): /GstPipeline:pipeline/GstBin:processing_bin_0/GstBin:sink_bin/GstBin:sink_sub_bin1/GstEglGlesSink:sink_sub_bin_sink1
+2025-02-10 11:18:40,008 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:40,009 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:40,019 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:40,019 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:40,030 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:40,030 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:40,040 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:40,040 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:40,050 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:40,051 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:40,061 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:40,061 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:40,071 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:40,071 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:40,082 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:40,082 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:40,092 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-02-10 11:18:40,092 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "classes": {},
+    "avg_confidence": 0
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-02-10 11:18:42,426 - DeepStreamLauncher - INFO - Stopping DeepStream Launcher...
+2025-02-10 11:18:42,427 - DeepStreamLauncher - INFO - DeepStream STDOUT: User Interrupted..
+2025-02-10 11:18:42,427 - DeepStreamLauncher - INFO - Terminating DeepStream process...
+2025-02-10 11:18:43,094 - DeepStreamLauncher - INFO - DeepStream Launcher stopped

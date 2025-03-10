@@ -1,0 +1,42 @@
+2025-01-22 15:51:12,872 - DeepStreamLauncher - INFO - Starting DeepStream Launcher...
+2025-01-22 15:51:12,872 - DeepStreamLauncher - INFO - Created pipe: /tmp/ds_detection_pipe
+2025-01-22 15:51:12,872 - DeepStreamLauncher - INFO - Created pipe: /tmp/ds_segmentation_pipe
+2025-01-22 15:51:12,972 - DeepStreamLauncher - INFO - Opening pipes for reading...
+2025-01-22 15:51:12,973 - DeepStreamLauncher - INFO - Opened pipe: /tmp/ds_detection_pipe
+2025-01-22 15:51:12,973 - DeepStreamLauncher - INFO - Opened pipe: /tmp/ds_segmentation_pipe
+2025-01-22 15:51:12,974 - DeepStreamLauncher - INFO - Starting DeepStream...
+2025-01-22 15:51:12,977 - DeepStreamLauncher - INFO - DeepStream process PID: 863961
+2025-01-22 15:51:13,009 - DeepStreamLauncher - INFO - DeepStream STDOUT: Setting up IPC pipes...
+2025-01-22 15:51:13,010 - DeepStreamLauncher - INFO - DeepStream STDOUT: Opening detection pipe for writing...
+2025-01-22 15:51:13,010 - DeepStreamLauncher - INFO - DeepStream STDOUT: Opening segmentation pipe for writing...
+2025-01-22 15:51:13,010 - DeepStreamLauncher - INFO - DeepStream STDOUT: Both pipes opened successfully
+2025-01-22 15:51:13,010 - DeepStreamLauncher - INFO - DeepStream STDOUT: Initializing config files...
+2025-01-22 15:51:13,010 - DeepStreamLauncher - INFO - DeepStream STDOUT: Parsing config file for Stream[0]: /home/tat/deepstream-custom-app/configs/deepstream_app_config_box_wedcam.txt
+2025-01-22 15:51:13,010 - DeepStreamLauncher - INFO - DeepStream STDOUT: Parsing config file for Stream[1]: /home/tat/deepstream-custom-app/configs/deepstream_app_config_seg.txt
+2025-01-22 15:51:13,010 - DeepStreamLauncher - INFO - DeepStream STDOUT: ROI set to: x=320, y=180, w=1280, h=720
+2025-01-22 15:51:13,010 - DeepStreamLauncher - INFO - DeepStream STDOUT: ** WARN: <parse_streammux:779>: Unknown key 'batch-timeout' for group [streammux]
+2025-01-22 15:51:13,010 - DeepStreamLauncher - INFO - DeepStream STDOUT: ** WARN: <parse_gie:1388>: Unknown key 'parse-roi' for group [primary-gie]
+2025-01-22 15:51:13,010 - DeepStreamLauncher - INFO - DeepStream STDOUT: ** WARN: <parse_gie:1388>: Unknown key 'infer-on-roi' for group [primary-gie]
+2025-01-22 15:51:13,010 - DeepStreamLauncher - INFO - DeepStream STDOUT: ** WARN: <parse_gie:1388>: Unknown key 'process-mode' for group [primary-gie]
+2025-01-22 15:51:13,010 - DeepStreamLauncher - INFO - DeepStream STDOUT: ** WARN: <parse_gie:1388>: Unknown key 'roi-enable' for group [primary-gie]
+2025-01-22 15:51:13,010 - DeepStreamLauncher - INFO - DeepStream STDOUT: ** WARN: <parse_gie:1388>: Unknown key 'roi-params' for group [primary-gie]
+2025-01-22 15:51:13,010 - DeepStreamLauncher - INFO - DeepStream STDOUT: ** WARN: <parse_gie:1388>: Unknown key 'roi-filter-enable' for group [primary-gie]
+2025-01-22 15:51:13,010 - DeepStreamLauncher - INFO - DeepStream STDOUT: ** WARN: <parse_gie:1388>: Unknown key 'input-object-min-width' for group [primary-gie]
+2025-01-22 15:51:13,010 - DeepStreamLauncher - INFO - DeepStream STDOUT: ** WARN: <parse_gie:1388>: Unknown key 'input-object-min-height' for group [primary-gie]
+2025-01-22 15:51:13,010 - DeepStreamLauncher - INFO - DeepStream STDOUT: ** WARN: <parse_gie:1388>: Unknown key 'input-object-max-width' for group [primary-gie]
+2025-01-22 15:51:13,010 - DeepStreamLauncher - INFO - DeepStream STDOUT: ** WARN: <parse_gie:1388>: Unknown key 'input-object-max-height' for group [primary-gie]
+2025-01-22 15:51:13,010 - DeepStreamLauncher - INFO - DeepStream STDOUT: Creating pipelines...
+2025-01-22 15:51:13,010 - DeepStreamLauncher - INFO - DeepStream STDOUT: Creating pipeline for Stream[0]
+2025-01-22 15:51:13,237 - DeepStreamLauncher - INFO - DeepStream STDOUT: Creating pipeline for Stream[1]
+2025-01-22 15:51:13,240 - DeepStreamLauncher - INFO - DeepStream STDERR: Error. 'infer-dims' array length is 2. Should be 3 as [c;h;w] order.
+2025-01-22 15:51:13,240 - DeepStreamLauncher - INFO - DeepStream STDERR: Failed to parse group property
+2025-01-22 15:51:13,240 - DeepStreamLauncher - INFO - DeepStream STDERR: ** ERROR: <gst_nvinfer_parse_config_file:1308>: failed
+2025-01-22 15:51:13,240 - DeepStreamLauncher - INFO - DeepStream STDERR: 
+2025-01-22 15:51:13,241 - DeepStreamLauncher - INFO - DeepStream STDERR: (deepstream-app:863961): GLib-CRITICAL **: 15:51:13.240: g_key_file_load_from_file: assertion 'file != NULL' failed
+2025-01-22 15:51:14,979 - DeepStreamLauncher - ERROR - DeepStream failed to start: 
+2025-01-22 15:51:14,979 - DeepStreamLauncher - ERROR - Failed to start DeepStream
+2025-01-22 15:51:14,979 - DeepStreamLauncher - INFO - Stopping DeepStream Launcher...
+2025-01-22 15:51:14,979 - DeepStreamLauncher - INFO - Terminating DeepStream process...
+2025-01-22 15:51:15,480 - DeepStreamLauncher - INFO - DeepStream Launcher stopped
+2025-01-22 15:51:15,480 - DeepStreamLauncher - INFO - Stopping DeepStream Launcher...
+2025-01-22 15:51:15,981 - DeepStreamLauncher - INFO - DeepStream Launcher stopped

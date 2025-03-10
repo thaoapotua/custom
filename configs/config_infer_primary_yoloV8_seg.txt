@@ -1,0 +1,22 @@
+# configs/config_infer_primary_yoloV8_seg.txt
+[property]
+gpu-id=0
+net-scale-factor=0.0039215697906911373
+model-color-format=0
+onnx-file=/home/tat/DeepStream-Yolo-Seg/quan.onnx
+model-engine-file=/home/tat/DeepStream-Yolo-Seg/quan.onnx_b1_gpu0_fp16.engine
+labelfile-path=../configs/labels_seg.txt
+batch-size=1
+network-mode=2
+num-detected-classes=11
+interval=0
+gie-unique-id=1
+process-mode=1
+network-type=3
+cluster-mode=4
+maintain-aspect-ratio=1
+symmetric-padding=1
+parse-bbox-instance-mask-func-name=NvDsInferParseYoloSeg
+custom-lib-path=../configs/DeepStream-Yolo-Seg/nvdsinfer_custom_impl_Yolo_seg/libnvdsinfer_custom_impl_Yolo_seg.so
+output-instance-mask=1
+segmentation-threshold=0.2

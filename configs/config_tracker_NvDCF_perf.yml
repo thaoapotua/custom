@@ -1,0 +1,7 @@
+tracker-type: 4
+track-input-filter: 2
+track-output-filter: 5
+match-lcd: 0
+match-border: 0
+tracker-assigned-id-start: 1
+display-tracking-id: 1

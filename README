@@ -1,0 +1,7 @@
+onnx
+python /media/tat/Learn/deepstream_tensorrt/DeepStream-Yolo/utils/export_yoloV8.py -w /home/tat/deepstream-custom-app/configs/DeepStream-Yolo/yolov8n.pt --dynamic
+
+make
+sudo make CUDA_VER=11.8
+
+sudo python3 deepstream_launcher.py

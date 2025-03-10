@@ -1,0 +1,15 @@
+2024-11-04 15:03:28,836 - DeepStreamLauncher - INFO - Starting DeepStream Launcher...
+2024-11-04 15:03:28,836 - DeepStreamLauncher - INFO - Created pipe: /tmp/ds_detection_pipe
+2024-11-04 15:03:28,836 - DeepStreamLauncher - INFO - Created pipe: /tmp/ds_segmentation_pipe
+2024-11-04 15:03:28,937 - DeepStreamLauncher - INFO - Opening pipes for reading...
+2024-11-04 15:03:28,937 - DeepStreamLauncher - INFO - Opened pipe: /tmp/ds_detection_pipe
+2024-11-04 15:03:28,937 - DeepStreamLauncher - INFO - Opened pipe: /tmp/ds_segmentation_pipe
+2024-11-04 15:03:28,937 - DeepStreamLauncher - INFO - Starting DeepStream...
+2024-11-04 15:03:30,940 - DeepStreamLauncher - INFO - DeepStream started successfully
+2024-11-04 15:03:30,941 - DeepStreamLauncher - INFO - Starting reader for /tmp/ds_detection_pipe
+2024-11-04 15:03:30,941 - DeepStreamLauncher - INFO - Starting reader for /tmp/ds_segmentation_pipe
+2024-11-04 15:03:30,941 - DeepStreamLauncher - INFO - DeepStream Launcher started successfully
+2024-11-04 15:04:05,553 - DeepStreamLauncher - INFO - Stopping DeepStream Launcher...
+2024-11-04 15:04:05,592 - DeepStreamLauncher - INFO - DeepStream [STDOUT]: nvstreammux: Successfully handled EOS for source_id=0
+2024-11-04 15:04:06,593 - DeepStreamLauncher - INFO - DeepStream [STDOUT]: nvstreammux: Successfully handled EOS for source_id=0
+2024-11-04 15:04:07,622 - DeepStreamLauncher - INFO - DeepStream Launcher stopped

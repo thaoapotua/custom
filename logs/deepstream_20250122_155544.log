@@ -1,0 +1,1352 @@
+2025-01-22 15:55:44,371 - DeepStreamLauncher - INFO - Starting DeepStream Launcher...
+2025-01-22 15:55:44,371 - DeepStreamLauncher - INFO - Created pipe: /tmp/ds_detection_pipe
+2025-01-22 15:55:44,371 - DeepStreamLauncher - INFO - Created pipe: /tmp/ds_segmentation_pipe
+2025-01-22 15:55:44,472 - DeepStreamLauncher - INFO - Opening pipes for reading...
+2025-01-22 15:55:44,472 - DeepStreamLauncher - INFO - Opened pipe: /tmp/ds_detection_pipe
+2025-01-22 15:55:44,472 - DeepStreamLauncher - INFO - Opened pipe: /tmp/ds_segmentation_pipe
+2025-01-22 15:55:44,473 - DeepStreamLauncher - INFO - Starting DeepStream...
+2025-01-22 15:55:44,475 - DeepStreamLauncher - INFO - DeepStream process PID: 873842
+2025-01-22 15:55:44,506 - DeepStreamLauncher - INFO - DeepStream STDOUT: Setting up IPC pipes...
+2025-01-22 15:55:44,506 - DeepStreamLauncher - INFO - DeepStream STDOUT: Opening detection pipe for writing...
+2025-01-22 15:55:44,506 - DeepStreamLauncher - INFO - DeepStream STDOUT: Opening segmentation pipe for writing...
+2025-01-22 15:55:44,506 - DeepStreamLauncher - INFO - DeepStream STDOUT: Both pipes opened successfully
+2025-01-22 15:55:44,506 - DeepStreamLauncher - INFO - DeepStream STDOUT: Initializing config files...
+2025-01-22 15:55:44,506 - DeepStreamLauncher - INFO - DeepStream STDOUT: Parsing config file for Stream[0]: /home/tat/deepstream-custom-app/configs/deepstream_app_config_box_wedcam.txt
+2025-01-22 15:55:44,506 - DeepStreamLauncher - INFO - DeepStream STDOUT: Parsing config file for Stream[1]: /home/tat/deepstream-custom-app/configs/deepstream_app_config_seg.txt
+2025-01-22 15:55:44,506 - DeepStreamLauncher - INFO - DeepStream STDOUT: ROI set to: x=320, y=180, w=1280, h=720
+2025-01-22 15:55:44,506 - DeepStreamLauncher - INFO - DeepStream STDOUT: ** WARN: <parse_streammux:779>: Unknown key 'batch-timeout' for group [streammux]
+2025-01-22 15:55:44,506 - DeepStreamLauncher - INFO - DeepStream STDOUT: ** WARN: <parse_gie:1388>: Unknown key 'operate-on-roi' for group [primary-gie]
+2025-01-22 15:55:44,506 - DeepStreamLauncher - INFO - DeepStream STDOUT: ** WARN: <parse_gie:1388>: Unknown key 'region-of-interest' for group [primary-gie]
+2025-01-22 15:55:44,506 - DeepStreamLauncher - INFO - DeepStream STDOUT: Creating pipelines...
+2025-01-22 15:55:44,506 - DeepStreamLauncher - INFO - DeepStream STDOUT: Creating pipeline for Stream[0]
+2025-01-22 15:55:44,768 - DeepStreamLauncher - INFO - DeepStream STDOUT: Creating pipeline for Stream[1]
+2025-01-22 15:55:44,774 - DeepStreamLauncher - INFO - DeepStream STDOUT: Setting pipelines to PLAYING state...
+2025-01-22 15:55:46,477 - DeepStreamLauncher - INFO - DeepStream started successfully
+2025-01-22 15:55:46,477 - DeepStreamLauncher - INFO - Starting reader for /tmp/ds_detection_pipe
+2025-01-22 15:55:46,478 - DeepStreamLauncher - INFO - Starting reader for /tmp/ds_segmentation_pipe
+2025-01-22 15:55:46,478 - DeepStreamLauncher - INFO - DeepStream Launcher started successfully
+2025-01-22 15:55:46,890 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.401583850 [333m873842[00m 0x56004bc0f400 [36mINFO   [00m [00m             nvinfer gstnvinfer.cpp:680:gst_nvinfer_logger:<primary_gie>[00m NvDsInferContext[UID 1]: Info from NvDsInferContextImpl::deserializeEngineAndBackend() <nvdsinfer_context_impl.cpp:1909> [UID = 1]: deserialized trt engine from :/home/tat/deepstream-custom-app/configs/model_b1_gpu0_fp16.engine
+2025-01-22 15:55:46,925 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.437268340 [333m873842[00m 0x56004bc0f400 [36mINFO   [00m [00m             nvinfer gstnvinfer.cpp:680:gst_nvinfer_logger:<primary_gie>[00m NvDsInferContext[UID 1]: Info from NvDsInferContextImpl::generateBackendContext() <nvdsinfer_context_impl.cpp:2012> [UID = 1]: Use deserialized engine model: /home/tat/deepstream-custom-app/configs/model_b1_gpu0_fp16.engine
+2025-01-22 15:55:46,926 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.438049695 [333m873842[00m 0x56004bc0f400 [36mINFO   [00m [00m             nvinfer gstnvinfer_impl.cpp:328:notifyLoadModelStatus:<primary_gie>[00m [UID 1]: Load new model:/home/tat/deepstream-custom-app/configs/../configs/config_infer_primary_yoloV8_box.txt sucessfully
+2025-01-22 15:55:46,927 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.438545974 [333m873842[00m 0x56004bc0f400 [33;01mWARN   [00m [00m             v4l2src gstv4l2src.c:695:gst_v4l2src_query:<src_elem>[00m Can't give latency since framerate isn't fixated !
+2025-01-22 15:55:46,927 - DeepStreamLauncher - INFO - DeepStream STDOUT: WARNING: [TRT]: The getMaxBatchSize() function should not be used with an engine built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. This function will always return 1.
+2025-01-22 15:55:46,927 - DeepStreamLauncher - INFO - DeepStream STDOUT: INFO: ../nvdsinfer/nvdsinfer_model_builder.cpp:610 [Implicit Engine Info]: layers num: 4
+2025-01-22 15:55:46,927 - DeepStreamLauncher - INFO - DeepStream STDOUT: 0   INPUT  kFLOAT input           3x640x640
+2025-01-22 15:55:46,927 - DeepStreamLauncher - INFO - DeepStream STDOUT: 1   OUTPUT kFLOAT boxes           8400x4
+2025-01-22 15:55:46,927 - DeepStreamLauncher - INFO - DeepStream STDOUT: 2   OUTPUT kFLOAT scores          8400x1
+2025-01-22 15:55:46,927 - DeepStreamLauncher - INFO - DeepStream STDOUT: 3   OUTPUT kFLOAT classes         8400x1
+2025-01-22 15:55:46,928 - DeepStreamLauncher - INFO - DeepStream STDOUT: 
+2025-01-22 15:55:46,928 - DeepStreamLauncher - INFO - DeepStream STDOUT: Pipeline 0 is PLAYING
+2025-01-22 15:55:46,936 - DeepStreamLauncher - INFO - DeepStream STDOUT: gstnvtracker: Loading low-level lib at /opt/nvidia/deepstream/deepstream/lib/libnvds_nvmultiobjecttracker.so
+2025-01-22 15:55:46,936 - DeepStreamLauncher - INFO - DeepStream STDOUT: gstnvtracker: Batch processing is ON
+2025-01-22 15:55:46,937 - DeepStreamLauncher - INFO - DeepStream STDOUT: gstnvtracker: Past frame output is OFF
+2025-01-22 15:55:46,937 - DeepStreamLauncher - INFO - DeepStream STDOUT: [NvMultiObjectTracker] Initialized
+2025-01-22 15:55:47,188 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:02.700146899 [333m873842[00m 0x56004b24d760 [33;01mWARN   [00m [00m             v4l2src gstv4l2src.c:978:gst_v4l2src_create:<src_elem>[00m lost frames detected: count = 1 - ts: 0:00:00.229558546
+2025-01-22 15:55:47,289 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 0
+2025-01-22 15:55:47,290 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:47,290 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:47,290 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:47,298 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.45
+- BBox: x=231.8, y=223.6, w=528.8, h=316.0
+2025-01-22 15:55:47,304 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 1
+2025-01-22 15:55:47,305 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:47,305 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:47,305 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:47,305 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 2
+2025-01-22 15:55:47,305 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:47,305 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:47,305 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:47,306 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 3
+2025-01-22 15:55:47,306 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:47,306 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:47,306 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:47,308 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.76
+- BBox: x=230.6, y=223.2, w=536.2, h=316.4
+2025-01-22 15:55:47,318 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.78
+- BBox: x=232.3, y=223.9, w=532.9, h=315.8
+2025-01-22 15:55:47,328 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.73
+- BBox: x=231.0, y=218.5, w=557.2, h=321.0
+2025-01-22 15:55:47,332 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 4
+2025-01-22 15:55:47,332 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:47,332 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:47,332 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:47,338 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.72
+- BBox: x=232.3, y=223.3, w=532.9, h=316.2
+2025-01-22 15:55:47,381 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 5
+2025-01-22 15:55:47,381 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:47,381 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:47,381 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:47,389 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.76
+- BBox: x=232.5, y=222.8, w=537.0, h=316.8
+2025-01-22 15:55:47,405 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 6
+2025-01-22 15:55:47,405 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:47,406 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:47,406 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:47,409 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.75
+- BBox: x=232.3, y=218.2, w=580.9, h=321.3
+2025-01-22 15:55:47,415 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 7
+2025-01-22 15:55:47,416 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:47,416 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:47,416 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:47,420 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.80
+- BBox: x=232.7, y=222.8, w=547.1, h=316.8
+2025-01-22 15:55:47,439 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 8
+2025-01-22 15:55:47,439 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:47,439 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:47,439 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:47,440 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.77
+- BBox: x=231.9, y=222.3, w=553.1, h=317.2
+2025-01-22 15:55:47,472 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 9
+2025-01-22 15:55:47,472 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:47,472 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:47,473 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:47,480 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.79
+- BBox: x=233.2, y=223.2, w=539.2, h=316.4
+2025-01-22 15:55:47,492 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 10
+2025-01-22 15:55:47,492 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:47,492 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:47,492 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:47,501 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.74
+- BBox: x=232.5, y=222.3, w=569.2, h=317.2
+2025-01-22 15:55:47,527 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 11
+2025-01-22 15:55:47,528 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:47,528 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:47,528 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:47,531 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.78
+- BBox: x=232.5, y=222.8, w=548.2, h=316.8
+2025-01-22 15:55:47,559 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 12
+2025-01-22 15:55:47,560 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:47,560 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:47,560 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:47,562 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.80
+- BBox: x=232.9, y=222.0, w=533.2, h=317.9
+2025-01-22 15:55:47,592 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 13
+2025-01-22 15:55:47,592 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:47,592 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:47,592 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:47,592 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.79
+- BBox: x=233.4, y=222.3, w=526.1, h=317.2
+2025-01-22 15:55:47,627 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 14
+2025-01-22 15:55:47,628 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:47,628 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:47,628 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:47,633 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.78
+- BBox: x=233.6, y=222.8, w=527.2, h=316.8
+2025-01-22 15:55:47,659 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 15
+2025-01-22 15:55:47,660 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:47,660 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:47,660 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:47,663 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.78
+- BBox: x=233.2, y=223.1, w=534.8, h=316.6
+2025-01-22 15:55:47,691 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 16
+2025-01-22 15:55:47,692 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:47,692 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:47,692 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:47,693 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.77
+- BBox: x=233.8, y=221.6, w=558.4, h=317.9
+2025-01-22 15:55:47,727 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 17
+2025-01-22 15:55:47,728 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:47,728 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:47,728 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:47,734 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.80
+- BBox: x=234.8, y=222.8, w=550.5, h=316.8
+2025-01-22 15:55:47,759 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 18
+2025-01-22 15:55:47,760 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:47,760 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:47,760 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:47,764 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.80
+- BBox: x=234.8, y=222.2, w=534.0, h=317.5
+2025-01-22 15:55:47,791 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 19
+2025-01-22 15:55:47,792 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:47,792 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:47,792 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:47,795 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.79
+- BBox: x=234.0, y=223.2, w=552.0, h=316.8
+2025-01-22 15:55:47,828 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 20
+2025-01-22 15:55:47,828 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:47,828 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:47,828 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:47,835 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.79
+- BBox: x=234.8, y=222.3, w=533.2, h=317.2
+2025-01-22 15:55:47,859 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 21
+2025-01-22 15:55:47,860 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:47,860 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:47,860 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:47,866 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.79
+- BBox: x=234.0, y=221.9, w=529.5, h=317.7
+2025-01-22 15:55:47,891 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 22
+2025-01-22 15:55:47,892 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:47,892 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:47,892 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:47,896 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.81
+- BBox: x=235.5, y=222.3, w=537.0, h=317.2
+2025-01-22 15:55:47,924 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 23
+2025-01-22 15:55:47,924 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:47,924 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:47,924 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:47,926 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.79
+- BBox: x=236.1, y=222.2, w=541.9, h=317.5
+2025-01-22 15:55:47,960 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 24
+2025-01-22 15:55:47,960 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:47,960 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:47,960 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:47,967 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.78
+- BBox: x=236.4, y=221.5, w=536.6, h=318.1
+2025-01-22 15:55:47,991 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 25
+2025-01-22 15:55:47,992 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:47,992 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:47,992 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:47,997 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.79
+- BBox: x=236.2, y=221.9, w=534.0, h=318.1
+2025-01-22 15:55:48,024 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 26
+2025-01-22 15:55:48,026 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:48,026 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:48,026 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:48,028 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.79
+- BBox: x=236.4, y=221.6, w=532.1, h=317.9
+2025-01-22 15:55:48,060 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 27
+2025-01-22 15:55:48,061 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:48,061 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:48,061 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:48,069 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.78
+- BBox: x=237.0, y=222.3, w=536.2, h=317.7
+2025-01-22 15:55:48,092 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 28
+2025-01-22 15:55:48,092 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:48,092 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:48,092 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:48,099 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.77
+- BBox: x=237.8, y=221.9, w=551.2, h=317.7
+2025-01-22 15:55:48,124 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 29
+2025-01-22 15:55:48,124 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:48,124 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:48,124 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:48,129 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.80
+- BBox: x=238.5, y=222.2, w=529.5, h=317.5
+2025-01-22 15:55:48,160 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 30
+2025-01-22 15:55:48,160 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.78
+- BBox: x=237.8, y=221.9, w=533.2, h=318.1
+2025-01-22 15:55:48,160 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:48,160 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:48,160 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:48,192 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 31
+2025-01-22 15:55:48,192 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:48,192 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:48,192 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:48,200 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.80
+- BBox: x=239.2, y=221.9, w=525.8, h=317.7
+2025-01-22 15:55:48,225 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 32
+2025-01-22 15:55:48,225 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:48,225 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:48,225 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:48,231 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.81
+- BBox: x=238.5, y=221.9, w=528.0, h=318.1
+2025-01-22 15:55:48,260 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 33
+2025-01-22 15:55:48,260 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:48,260 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:48,260 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:48,261 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.78
+- BBox: x=237.8, y=221.2, w=528.8, h=318.7
+2025-01-22 15:55:48,292 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 34
+2025-01-22 15:55:48,292 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:48,292 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:48,292 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:48,292 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.82
+- BBox: x=238.5, y=221.1, w=525.8, h=318.9
+2025-01-22 15:55:48,324 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 35
+2025-01-22 15:55:48,324 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:48,324 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:48,324 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:48,332 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.80
+- BBox: x=238.9, y=220.5, w=526.5, h=319.1
+2025-01-22 15:55:48,360 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 36
+2025-01-22 15:55:48,360 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:48,360 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:48,360 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:48,363 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.82
+- BBox: x=239.8, y=220.7, w=523.9, h=318.7
+2025-01-22 15:55:48,391 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 37
+2025-01-22 15:55:48,392 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:48,392 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:48,392 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:48,393 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.81
+- BBox: x=239.6, y=221.1, w=521.2, h=318.5
+2025-01-22 15:55:48,424 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.81
+- BBox: x=239.4, y=221.1, w=526.1, h=318.5
+2025-01-22 15:55:48,424 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 38
+2025-01-22 15:55:48,424 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:48,424 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:48,424 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:48,456 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 39
+2025-01-22 15:55:48,456 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:48,456 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:48,457 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:48,464 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.83
+- BBox: x=238.9, y=220.2, w=520.5, h=319.4
+2025-01-22 15:55:48,492 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 40
+2025-01-22 15:55:48,492 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:48,492 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:48,492 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:48,495 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.82
+- BBox: x=239.2, y=220.2, w=524.2, h=319.8
+2025-01-22 15:55:48,525 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 41
+2025-01-22 15:55:48,525 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:48,525 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:48,525 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:48,525 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.83
+- BBox: x=240.0, y=221.1, w=522.8, h=318.5
+2025-01-22 15:55:48,557 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 42
+2025-01-22 15:55:48,557 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:48,557 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:48,557 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:48,565 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.83
+- BBox: x=238.5, y=220.6, w=523.5, h=318.9
+2025-01-22 15:55:48,591 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 43
+2025-01-22 15:55:48,592 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:48,592 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:48,592 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:48,596 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.82
+- BBox: x=239.1, y=219.9, w=523.9, h=319.6
+2025-01-22 15:55:48,624 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 44
+2025-01-22 15:55:48,624 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:48,624 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:48,624 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:48,626 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.81
+- BBox: x=239.2, y=220.5, w=523.5, h=319.1
+2025-01-22 15:55:48,656 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 45
+2025-01-22 15:55:48,656 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:48,656 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:48,657 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:48,657 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.84
+- BBox: x=240.0, y=221.1, w=519.0, h=318.5
+2025-01-22 15:55:48,692 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 46
+2025-01-22 15:55:48,692 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:48,692 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:48,692 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:48,697 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.85
+- BBox: x=239.8, y=221.1, w=517.9, h=318.5
+2025-01-22 15:55:48,725 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 47
+2025-01-22 15:55:48,725 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:48,725 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:48,725 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:48,728 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.81
+- BBox: x=239.6, y=221.0, w=521.2, h=319.0
+2025-01-22 15:55:48,756 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 48
+2025-01-22 15:55:48,757 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:48,757 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:48,757 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:48,758 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.82
+- BBox: x=238.5, y=221.1, w=520.5, h=318.9
+2025-01-22 15:55:48,795 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 49
+2025-01-22 15:55:48,795 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:48,795 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:48,795 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:48,798 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.82
+- BBox: x=239.6, y=222.3, w=519.0, h=317.7
+2025-01-22 15:55:48,827 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 50
+2025-01-22 15:55:48,827 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:48,827 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:48,827 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:48,829 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.81
+- BBox: x=241.5, y=221.9, w=518.2, h=317.7
+2025-01-22 15:55:48,859 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 51
+2025-01-22 15:55:48,859 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:48,860 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:48,860 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:48,869 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.81
+- BBox: x=239.4, y=222.8, w=518.6, h=316.8
+2025-01-22 15:55:48,895 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 52
+2025-01-22 15:55:48,895 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:48,895 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:48,895 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:48,900 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.83
+- BBox: x=240.8, y=222.8, w=518.2, h=317.2
+2025-01-22 15:55:48,926 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 53
+2025-01-22 15:55:48,927 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:48,927 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:48,927 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:48,930 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.83
+- BBox: x=242.2, y=221.9, w=515.2, h=317.7
+2025-01-22 15:55:48,959 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 54
+2025-01-22 15:55:48,959 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:48,959 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:48,959 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:48,961 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.82
+- BBox: x=242.2, y=222.3, w=516.0, h=317.2
+2025-01-22 15:55:48,994 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 55
+2025-01-22 15:55:48,994 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:48,995 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:48,995 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:49,001 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.84
+- BBox: x=242.2, y=222.3, w=514.5, h=317.2
+2025-01-22 15:55:49,027 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 56
+2025-01-22 15:55:49,028 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:49,028 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:49,028 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:49,032 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.83
+- BBox: x=244.1, y=222.3, w=513.8, h=317.2
+2025-01-22 15:55:49,059 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 57
+2025-01-22 15:55:49,060 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:49,060 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:49,060 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:49,062 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.83
+- BBox: x=241.5, y=223.2, w=516.0, h=316.8
+2025-01-22 15:55:49,081 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:04.593100581 [333m873842[00m 0x56004bc0f400 [33;01mWARN   [00m [00m             nvinfer gstnvinfer.cpp:677:gst_nvinfer_logger:<primary_gie>[00m NvDsInferContext[UID 2]: Warning from NvDsInferContextImpl::deserializeEngineAndBackend() <nvdsinfer_context_impl.cpp:1897> [UID = 2]: deserialize engine from file :/home/tat/deepstream-custom-app/configs/DeepStream-Yolo-Seg/yolov8s-seg.onnx_b1_gpu0_fp32.engine failed
+2025-01-22 15:55:49,093 - DeepStreamLauncher - INFO - DeepStream STDOUT: WARNING: ../nvdsinfer/nvdsinfer_model_builder.cpp:1487 Deserialize engine failed because file path: /home/tat/deepstream-custom-app/configs/DeepStream-Yolo-Seg/yolov8s-seg.onnx_b1_gpu0_fp32.engine open error
+2025-01-22 15:55:49,093 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 58
+2025-01-22 15:55:49,094 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:49,094 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:49,094 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:49,103 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.82
+- BBox: x=243.0, y=223.6, w=514.5, h=316.0
+2025-01-22 15:55:49,132 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 59
+2025-01-22 15:55:49,132 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:49,133 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:49,133 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:49,133 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.82
+- BBox: x=240.8, y=222.8, w=518.2, h=317.2
+2025-01-22 15:55:49,137 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:04.648598211 [333m873842[00m 0x56004bc0f400 [33;01mWARN   [00m [00m             nvinfer gstnvinfer.cpp:677:gst_nvinfer_logger:<primary_gie>[00m NvDsInferContext[UID 2]: Warning from NvDsInferContextImpl::generateBackendContext() <nvdsinfer_context_impl.cpp:2002> [UID = 2]: deserialize backend context from engine from file :/home/tat/deepstream-custom-app/configs/DeepStream-Yolo-Seg/yolov8s-seg.onnx_b1_gpu0_fp32.engine failed, try rebuild
+2025-01-22 15:55:49,137 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:04.648609682 [333m873842[00m 0x56004bc0f400 [36mINFO   [00m [00m             nvinfer gstnvinfer.cpp:680:gst_nvinfer_logger:<primary_gie>[00m NvDsInferContext[UID 2]: Info from NvDsInferContextImpl::buildModel() <nvdsinfer_context_impl.cpp:1923> [UID = 2]: Trying to create engine from model files
+2025-01-22 15:55:49,157 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 60
+2025-01-22 15:55:49,157 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:49,157 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:49,157 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:49,163 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.83
+- BBox: x=239.4, y=222.6, w=520.1, h=317.4
+2025-01-22 15:55:49,189 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 61
+2025-01-22 15:55:49,189 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:49,189 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:49,189 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:49,194 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.82
+- BBox: x=240.6, y=223.6, w=516.4, h=316.4
+2025-01-22 15:55:49,224 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.85
+- BBox: x=242.2, y=222.4, w=515.2, h=317.0
+2025-01-22 15:55:49,224 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 62
+2025-01-22 15:55:49,224 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:49,224 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:49,224 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:49,257 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 63
+2025-01-22 15:55:49,257 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:49,257 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:49,257 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:49,265 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.84
+- BBox: x=240.2, y=223.3, w=517.1, h=316.2
+2025-01-22 15:55:49,289 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 64
+2025-01-22 15:55:49,289 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:49,289 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:49,289 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:49,295 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.84
+- BBox: x=241.5, y=223.2, w=516.8, h=316.8
+2025-01-22 15:55:49,324 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 65
+2025-01-22 15:55:49,324 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:49,324 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:49,324 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:49,325 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.86
+- BBox: x=243.6, y=222.8, w=513.4, h=317.2
+2025-01-22 15:55:49,356 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 66
+2025-01-22 15:55:49,356 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:49,356 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:49,357 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:49,366 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.84
+- BBox: x=244.3, y=222.8, w=516.4, h=316.8
+2025-01-22 15:55:49,389 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 67
+2025-01-22 15:55:49,389 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:49,389 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:49,389 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:49,396 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.84
+- BBox: x=241.9, y=222.3, w=516.0, h=317.7
+2025-01-22 15:55:49,424 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 68
+2025-01-22 15:55:49,424 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:49,424 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:49,424 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:49,427 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.84
+- BBox: x=243.8, y=223.6, w=516.0, h=316.4
+2025-01-22 15:55:49,456 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 69
+2025-01-22 15:55:49,456 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:49,456 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:49,457 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:49,457 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.84
+- BBox: x=241.3, y=223.5, w=517.9, h=316.5
+2025-01-22 15:55:49,488 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 70
+2025-01-22 15:55:49,489 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:49,489 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:49,489 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:49,498 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.84
+- BBox: x=242.1, y=222.9, w=514.9, h=317.0
+2025-01-22 15:55:49,524 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 71
+2025-01-22 15:55:49,524 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:49,524 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:49,524 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:49,528 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.84
+- BBox: x=244.1, y=222.8, w=514.5, h=316.8
+2025-01-22 15:55:49,556 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 72
+2025-01-22 15:55:49,556 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:49,556 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:49,556 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:49,558 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.84
+- BBox: x=243.2, y=223.6, w=515.6, h=316.4
+2025-01-22 15:55:49,589 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 73
+2025-01-22 15:55:49,589 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:49,589 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:49,589 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:49,599 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.85
+- BBox: x=243.8, y=222.9, w=515.2, h=317.0
+2025-01-22 15:55:49,622 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 74
+2025-01-22 15:55:49,622 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:49,622 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:49,622 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:49,630 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.84
+- BBox: x=243.0, y=222.3, w=516.8, h=317.7
+2025-01-22 15:55:49,657 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 75
+2025-01-22 15:55:49,658 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:49,658 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:49,658 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:49,660 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.84
+- BBox: x=243.0, y=222.8, w=524.2, h=316.8
+2025-01-22 15:55:49,689 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 76
+2025-01-22 15:55:49,690 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:49,690 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:49,690 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:49,690 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.84
+- BBox: x=241.9, y=222.8, w=516.0, h=317.2
+2025-01-22 15:55:49,721 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 77
+2025-01-22 15:55:49,721 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:49,721 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:49,721 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:49,731 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.83
+- BBox: x=241.3, y=224.0, w=516.4, h=315.6
+2025-01-22 15:55:49,757 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 78
+2025-01-22 15:55:49,757 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:49,757 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:49,757 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:49,761 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.84
+- BBox: x=241.9, y=222.8, w=516.0, h=316.8
+2025-01-22 15:55:49,789 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 79
+2025-01-22 15:55:49,789 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:49,789 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:49,789 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:49,792 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.84
+- BBox: x=242.2, y=222.8, w=514.5, h=317.2
+2025-01-22 15:55:49,821 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 80
+2025-01-22 15:55:49,821 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:49,821 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:49,821 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:49,822 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.84
+- BBox: x=241.7, y=223.6, w=518.6, h=316.0
+2025-01-22 15:55:49,856 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 81
+2025-01-22 15:55:49,856 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:49,856 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:49,856 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:49,862 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.84
+- BBox: x=241.1, y=223.5, w=516.8, h=316.5
+2025-01-22 15:55:49,889 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 82
+2025-01-22 15:55:49,889 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:49,889 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:49,890 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:49,893 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.82
+- BBox: x=240.0, y=223.1, w=529.5, h=316.6
+2025-01-22 15:55:49,921 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 83
+2025-01-22 15:55:49,921 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:49,921 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:49,921 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:49,923 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.82
+- BBox: x=241.5, y=223.3, w=517.5, h=316.2
+2025-01-22 15:55:49,956 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 84
+2025-01-22 15:55:49,956 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:49,956 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:49,956 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:49,964 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.82
+- BBox: x=241.5, y=222.8, w=528.0, h=316.8
+2025-01-22 15:55:49,989 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 85
+2025-01-22 15:55:49,989 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:49,989 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:49,989 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:49,994 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.80
+- BBox: x=241.5, y=223.6, w=531.0, h=316.4
+2025-01-22 15:55:50,004 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-01-22 15:55:50,005 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 1,
+    "total_objects": 86,
+    "classes": {
+      "0": 86
+    },
+    "avg_confidence": 0.8060465116279069
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-01-22 15:55:50,015 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-01-22 15:55:50,015 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 1,
+    "total_objects": 86,
+    "classes": {
+      "0": 86
+    },
+    "avg_confidence": 0.8060465116279069
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-01-22 15:55:50,021 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 86
+2025-01-22 15:55:50,022 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:50,022 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:50,022 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:50,025 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.77
+- BBox: x=241.5, y=222.3, w=528.8, h=317.2
+2025-01-22 15:55:50,025 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-01-22 15:55:50,025 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 1,
+    "total_objects": 87,
+    "classes": {
+      "0": 87
+    },
+    "avg_confidence": 0.805632183908046
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-01-22 15:55:50,036 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-01-22 15:55:50,036 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 1,
+    "total_objects": 87,
+    "classes": {
+      "0": 87
+    },
+    "avg_confidence": 0.805632183908046
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-01-22 15:55:50,046 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-01-22 15:55:50,046 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 1,
+    "total_objects": 87,
+    "classes": {
+      "0": 87
+    },
+    "avg_confidence": 0.805632183908046
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-01-22 15:55:50,056 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-01-22 15:55:50,057 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 1,
+    "total_objects": 87,
+    "classes": {
+      "0": 87
+    },
+    "avg_confidence": 0.805632183908046
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-01-22 15:55:50,057 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 87
+2025-01-22 15:55:50,057 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:50,057 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:50,057 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:50,067 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.76
+- BBox: x=241.5, y=223.6, w=549.0, h=316.0
+2025-01-22 15:55:50,068 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-01-22 15:55:50,068 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 1,
+    "total_objects": 88,
+    "classes": {
+      "0": 88
+    },
+    "avg_confidence": 0.8051136363636363
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-01-22 15:55:50,078 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-01-22 15:55:50,078 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 1,
+    "total_objects": 88,
+    "classes": {
+      "0": 88
+    },
+    "avg_confidence": 0.8051136363636363
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-01-22 15:55:50,088 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-01-22 15:55:50,089 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 1,
+    "total_objects": 88,
+    "classes": {
+      "0": 88
+    },
+    "avg_confidence": 0.8051136363636363
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-01-22 15:55:50,089 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 88
+2025-01-22 15:55:50,089 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:50,089 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:50,090 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:50,099 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.79
+- BBox: x=240.8, y=222.8, w=525.0, h=317.2
+2025-01-22 15:55:50,099 - DeepStreamLauncher - INFO - 
+Stream Statistics:
+2025-01-22 15:55:50,099 - DeepStreamLauncher - INFO - {
+  "detection": {
+    "total_frames": 1,
+    "total_objects": 89,
+    "classes": {
+      "0": 89
+    },
+    "avg_confidence": 0.8049438202247191
+  },
+  "segmentation": {
+    "total_frames": 0,
+    "total_objects": 0,
+    "unique_tracks": 0,
+    "classes": {},
+    "avg_confidence": 0
+  }
+}
+2025-01-22 15:55:50,121 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 89
+2025-01-22 15:55:50,121 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:50,122 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:50,122 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:50,130 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.79
+- BBox: x=242.2, y=224.4, w=522.8, h=315.1
+2025-01-22 15:55:50,156 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 90
+2025-01-22 15:55:50,156 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:50,156 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:50,156 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:50,160 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.76
+- BBox: x=242.1, y=222.3, w=528.4, h=317.7
+2025-01-22 15:55:50,189 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 91
+2025-01-22 15:55:50,189 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:50,190 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:50,190 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:50,190 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.78
+- BBox: x=241.3, y=223.6, w=525.4, h=316.0
+2025-01-22 15:55:50,221 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 92
+2025-01-22 15:55:50,221 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:50,222 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:50,222 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:50,231 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.71
+- BBox: x=242.2, y=221.9, w=519.0, h=318.1
+2025-01-22 15:55:50,254 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 93
+2025-01-22 15:55:50,255 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:50,255 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:50,255 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:50,261 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.75
+- BBox: x=241.9, y=223.1, w=525.0, h=316.6
+2025-01-22 15:55:50,289 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 94
+2025-01-22 15:55:50,289 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:50,289 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:50,290 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:50,292 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.79
+- BBox: x=242.1, y=222.2, w=520.9, h=317.5
+2025-01-22 15:55:50,321 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 95
+2025-01-22 15:55:50,321 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:50,321 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:50,321 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:50,322 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.79
+- BBox: x=241.7, y=223.1, w=521.6, h=316.6
+2025-01-22 15:55:50,353 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 96
+2025-01-22 15:55:50,354 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:50,354 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:50,354 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:50,363 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.76
+- BBox: x=241.9, y=222.8, w=521.2, h=316.8
+2025-01-22 15:55:50,389 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 97
+2025-01-22 15:55:50,389 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:50,389 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:50,389 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:50,393 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.70
+- BBox: x=242.2, y=221.9, w=533.2, h=317.7
+2025-01-22 15:55:50,427 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 98
+2025-01-22 15:55:50,427 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:50,427 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:50,427 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:50,433 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.79
+- BBox: x=242.1, y=222.8, w=523.9, h=316.8
+2025-01-22 15:55:50,454 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 99
+2025-01-22 15:55:50,454 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:50,454 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:50,454 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:50,464 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.76
+- BBox: x=240.8, y=222.3, w=525.0, h=317.2
+2025-01-22 15:55:50,489 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 100
+2025-01-22 15:55:50,489 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:50,489 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:50,489 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:50,495 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.79
+- BBox: x=243.6, y=223.2, w=517.9, h=316.4
+2025-01-22 15:55:50,521 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 101
+2025-01-22 15:55:50,521 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:50,522 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:50,522 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:50,525 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.77
+- BBox: x=242.2, y=222.3, w=527.2, h=317.2
+2025-01-22 15:55:50,554 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 102
+2025-01-22 15:55:50,554 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:50,554 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:50,554 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:50,555 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.81
+- BBox: x=242.2, y=223.2, w=517.5, h=316.4
+2025-01-22 15:55:50,589 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 103
+2025-01-22 15:55:50,589 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:50,589 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:50,590 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:50,596 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.79
+- BBox: x=243.0, y=223.6, w=513.0, h=316.4
+2025-01-22 15:55:50,622 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 104
+2025-01-22 15:55:50,622 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:50,622 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:50,622 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:50,626 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.77
+- BBox: x=243.0, y=223.9, w=516.0, h=315.8
+2025-01-22 15:55:50,654 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 105
+2025-01-22 15:55:50,654 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:50,654 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:50,654 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:50,657 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.81
+- BBox: x=242.2, y=223.6, w=516.0, h=316.0
+2025-01-22 15:55:50,689 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 106
+2025-01-22 15:55:50,689 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:50,689 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:50,689 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:50,697 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.81
+- BBox: x=242.2, y=223.6, w=514.5, h=316.0
+2025-01-22 15:55:50,722 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 107
+2025-01-22 15:55:50,722 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:50,722 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:50,722 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:50,728 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.81
+- BBox: x=241.5, y=222.8, w=517.5, h=316.8
+2025-01-22 15:55:50,754 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 108
+2025-01-22 15:55:50,754 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:50,755 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:50,755 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:50,758 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.82
+- BBox: x=242.8, y=223.2, w=513.4, h=316.4
+2025-01-22 15:55:50,786 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 109
+2025-01-22 15:55:50,786 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:50,787 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:50,787 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:50,788 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.79
+- BBox: x=241.9, y=223.1, w=515.2, h=316.6
+2025-01-22 15:55:50,821 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 110
+2025-01-22 15:55:50,821 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:50,822 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:50,822 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:50,829 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.80
+- BBox: x=241.9, y=223.6, w=516.0, h=316.0
+2025-01-22 15:55:50,854 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 111
+2025-01-22 15:55:50,854 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:50,854 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:50,854 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:50,859 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.80
+- BBox: x=241.5, y=222.4, w=517.5, h=317.0
+2025-01-22 15:55:50,886 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 112
+2025-01-22 15:55:50,886 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:50,886 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:50,886 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:50,890 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.79
+- BBox: x=241.9, y=222.3, w=515.2, h=317.2
+2025-01-22 15:55:50,924 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 113
+2025-01-22 15:55:50,924 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:50,924 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:50,924 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:50,930 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.77
+- BBox: x=240.9, y=221.9, w=518.6, h=317.7
+2025-01-22 15:55:50,957 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 114
+2025-01-22 15:55:50,958 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:50,958 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:50,958 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:50,960 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.71
+- BBox: x=242.2, y=222.8, w=519.8, h=316.8
+2025-01-22 15:55:50,989 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 115
+2025-01-22 15:55:50,990 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:50,990 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:50,990 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:50,991 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.75
+- BBox: x=243.0, y=222.3, w=516.0, h=317.7
+2025-01-22 15:55:51,023 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 116
+2025-01-22 15:55:51,023 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:51,023 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:51,024 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:51,031 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.78
+- BBox: x=243.2, y=222.8, w=514.1, h=316.8
+2025-01-22 15:55:51,058 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 117
+2025-01-22 15:55:51,058 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:51,058 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:51,058 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:51,062 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.78
+- BBox: x=242.8, y=223.3, w=514.9, h=316.2
+2025-01-22 15:55:51,090 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 118
+2025-01-22 15:55:51,090 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:51,090 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:51,090 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:51,092 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.78
+- BBox: x=242.8, y=222.3, w=516.4, h=317.7
+2025-01-22 15:55:51,124 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 119
+2025-01-22 15:55:51,124 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:51,124 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:51,124 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:51,133 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.79
+- BBox: x=243.4, y=223.1, w=513.8, h=316.6
+2025-01-22 15:55:51,156 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 120
+2025-01-22 15:55:51,156 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:51,156 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:51,156 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:51,157 - DeepStreamLauncher - INFO - DeepStream STDERR: ERROR: ../nvdsinfer/nvdsinfer_model_builder.cpp:307 Cannot access ONNX file '/home/tat/deepstream-custom-app/configs/DeepStream-Yolo-Seg/yolov8s-seg.onnx'
+2025-01-22 15:55:51,157 - DeepStreamLauncher - INFO - DeepStream STDERR: ERROR: ../nvdsinfer/nvdsinfer_model_builder.cpp:971 failed to build network since parsing model errors.
+2025-01-22 15:55:51,157 - DeepStreamLauncher - INFO - DeepStream STDERR: ERROR: ../nvdsinfer/nvdsinfer_model_builder.cpp:804 failed to build network.
+2025-01-22 15:55:51,157 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:06.668610171 [333m873842[00m 0x56004bc0f400 [31;01mERROR  [00m [00m             nvinfer gstnvinfer.cpp:674:gst_nvinfer_logger:<primary_gie>[00m NvDsInferContext[UID 2]: Error in NvDsInferContextImpl::buildModel() <nvdsinfer_context_impl.cpp:1943> [UID = 2]: build engine file failed
+2025-01-22 15:55:51,163 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.80
+- BBox: x=243.2, y=222.2, w=512.6, h=317.5
+2025-01-22 15:55:51,193 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing frame 121
+2025-01-22 15:55:51,194 - StreamProcessor - INFO - 
+Detection (Stream 0) | Frame 0:
+- Class ID: 0
+- Confidence: 0.75
+- BBox: x=241.5, y=222.3, w=518.2, h=317.7
+2025-01-22 15:55:51,194 - DeepStreamLauncher - INFO - DeepStream STDOUT: Processing Stream[0]
+2025-01-22 15:55:51,194 - DeepStreamLauncher - INFO - DeepStream STDOUT: Successfully wrote 100 bytes to Detection pipe
+2025-01-22 15:55:51,194 - DeepStreamLauncher - INFO - DeepStream STDOUT: Sent detection data for frame 0
+2025-01-22 15:55:51,201 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:06.713060079 [333m873842[00m 0x56004bc0f400 [31;01mERROR  [00m [00m             nvinfer gstnvinfer.cpp:674:gst_nvinfer_logger:<primary_gie>[00m NvDsInferContext[UID 2]: Error in NvDsInferContextImpl::generateBackendContext() <nvdsinfer_context_impl.cpp:2029> [UID = 2]: build backend context failed
+2025-01-22 15:55:51,201 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:06.713073157 [333m873842[00m 0x56004bc0f400 [31;01mERROR  [00m [00m             nvinfer gstnvinfer.cpp:674:gst_nvinfer_logger:<primary_gie>[00m NvDsInferContext[UID 2]: Error in NvDsInferContextImpl::initialize() <nvdsinfer_context_impl.cpp:1266> [UID = 2]: generate backend failed, check config file settings
+2025-01-22 15:55:51,202 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:06.713941850 [333m873842[00m 0x56004bc0f400 [33;01mWARN   [00m [00m             nvinfer gstnvinfer.cpp:888:gst_nvinfer_start:<primary_gie>[00m error: Failed to create NvDsInferContext instance
+2025-01-22 15:55:51,202 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:06.713949473 [333m873842[00m 0x56004bc0f400 [33;01mWARN   [00m [00m             nvinfer gstnvinfer.cpp:888:gst_nvinfer_start:<primary_gie>[00m error: Config file path: /home/tat/deepstream-custom-app/configs/../configs/DeepStream-Yolo-Seg/config_infer_primary_yoloV8_seg.txt, NvDsInfer Error: NVDSINFER_CONFIG_FAILED
+2025-01-22 15:55:51,202 - DeepStreamLauncher - INFO - DeepStream STDERR: 0:00:06.713979015 [333m873842[00m 0x56004bc0f400 [33;01mWARN   [00m [00;01;31;44m            GST_PADS gstpad.c:1142:gst_pad_set_active:<primary_gie:sink>[00m Failed to activate pad
+2025-01-22 15:55:51,203 - DeepStreamLauncher - INFO - DeepStream STDOUT: [NvMultiObjectTracker] De-initialized
+2025-01-22 15:55:51,203 - DeepStreamLauncher - INFO - DeepStream STDOUT: Failed to set pipeline 1 to PLAYING
+2025-01-22 15:55:51,203 - DeepStreamLauncher - INFO - DeepStream STDOUT: Cleaning up...
+2025-01-22 15:55:53,338 - DeepStreamLauncher - INFO - DeepStream STDOUT: Application completed successfully
+2025-01-22 15:55:53,587 - DeepStreamLauncher - INFO - Stopping DeepStream Launcher...
+2025-01-22 15:55:53,587 - DeepStreamLauncher - INFO - Terminating DeepStream process...
+2025-01-22 15:55:54,088 - DeepStreamLauncher - INFO - DeepStream Launcher stopped
